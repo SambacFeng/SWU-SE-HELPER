@@ -1,0 +1,7 @@
+﻿  washCmp.cpp
+C:\Users\TheWait\source\repos\Data Structure\Lab7_1\washCmp.cpp(34,25): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\TheWait\source\repos\Data Structure\Lab7_1\washCmp.cpp(39,28): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+C:\Users\TheWait\source\repos\Data Structure\Lab7_1\washCmp.cpp(56,22): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\TheWait\source\repos\Data Structure\Lab7_1\washCmp.cpp(66,22): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\TheWait\source\repos\Data Structure\Lab7_1\washCmp.cpp(75,22): warning C4018: “>”: 有符号/无符号不匹配
+  Lab7_1.vcxproj -> C:\Users\TheWait\source\repos\Data Structure\Debug\Lab7_1.exe

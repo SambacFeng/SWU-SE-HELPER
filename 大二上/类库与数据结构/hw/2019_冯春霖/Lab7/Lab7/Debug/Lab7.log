@@ -1,0 +1,5 @@
+﻿  washCmp.cpp
+C:\Users\TheWait\source\repos\Data Structure\Lab7\washCmp.cpp(35,23): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\TheWait\source\repos\Data Structure\Lab7\washCmp.cpp(52,25): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\TheWait\source\repos\Data Structure\Lab7\washCmp.cpp(65,23): warning C4018: “>”: 有符号/无符号不匹配
+  Lab7.vcxproj -> C:\Users\TheWait\source\repos\Data Structure\Debug\Lab7.exe

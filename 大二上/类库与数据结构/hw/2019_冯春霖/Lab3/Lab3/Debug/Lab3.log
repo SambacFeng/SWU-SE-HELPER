@@ -1,0 +1,5 @@
+﻿  company.cpp
+  main.cpp
+  正在生成代码...
+C:\Users\TheWait\source\repos\Data Structure\Lab3\contTemp.h(95): warning C4715: “ContTemp<Employee>::Access”: 不是所有的控件路径都返回值
+  Lab3.vcxproj -> C:\Users\TheWait\source\repos\Data Structure\Debug\Lab3.exe

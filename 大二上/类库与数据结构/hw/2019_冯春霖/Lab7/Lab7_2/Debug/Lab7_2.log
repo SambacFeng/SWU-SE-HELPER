@@ -1,0 +1,11 @@
+﻿  car.cpp
+C:\Users\TheWait\source\repos\Data Structure\Lab7_2\car.cpp(22,9): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+C:\Users\TheWait\source\repos\Data Structure\Lab7_2\car.cpp(27,9): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+C:\Users\TheWait\source\repos\Data Structure\Lab7_2\car.cpp(32,9): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+  main.cpp
+  washCmp.cpp
+C:\Users\TheWait\source\repos\Data Structure\Lab7_2\washCmp.cpp(53,22): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+C:\Users\TheWait\source\repos\Data Structure\Lab7_2\washCmp.cpp(63,22): warning C4018: “>”: 有符号/无符号不匹配
+C:\Users\TheWait\source\repos\Data Structure\Lab7_2\washCmp.cpp(72,21): warning C4018: “>”: 有符号/无符号不匹配
+  正在生成代码...
+  Lab7_2.vcxproj -> C:\Users\TheWait\source\repos\Data Structure\Debug\Lab7_2.exe
