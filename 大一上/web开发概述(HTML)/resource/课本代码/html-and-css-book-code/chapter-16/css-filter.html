@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>CSS滤镜的应用</title>
+<style type="text/css">
+<!--
+.lvjing{filter: DropShadow(Color=#17274c, OffX=5, OffY=5, Positive=1);}
+body,td{font-size:14px}
+-->
+</style>
+</head>
+<body topmargin="5px">
+<!--阴影效果-->
+<table width="300"  border="0" align="center" cellpadding="2" cellspacing="0" bgcolor="#F7D9A5">
+  <tr>
+    <td height="32" align="center" class="lvjing">CSS滤镜效果</td>
+  </tr>
+</table><br>
+<table width="550"  border="0" align="center" cellpadding="2" cellspacing="0">
+    <tr align="center" valign="top">
+      <td><img src="images/magnolia-medium.jpg" width="230" height="200" style=" filter: Alpha(Opacity=30, Style=1);"><br>
+      Alpha滤镜</td>
+      <td>&nbsp;</td>
+      <td><img src="images/magnolia-medium.jpg" width="230" height="200" style=" filter: Blur(Add=true, Direction=135, Strength=15); "><br>
+      Blur滤镜</td>
+    </tr>
+    <tr align="center" valign="top">
+      <td><img src="images/magnolia-medium.jpg" width="230" height="200" style=" filter: Wave(Add=add, LightStrength=50, Phase=2, Strength=5)"><br>
+      Wave滤镜</td>
+      <td>&nbsp;</td>
+      <td><img src="images/magnolia-medium.jpg" width="230" height="200" style=" filter: Gray; "><br>
+      Gray滤镜</td>
+    </tr>
+</table>
+</body>
+</html>

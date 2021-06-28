@@ -1,0 +1,244 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>注册表单</title>
+<style type="text/css">
+td {font-size: 12px;}
+</style>
+<script language="javascript">
+function check(){
+ var name=document.frm.name.value;
+ var ps=document.frm.password.value;
+ var psagain=document.frm.psagain.value;
+ var psquestion=document.frm.psquestion.value;
+ var psanswer=document.frm.psanswer.value;
+ var email=document.frm.email.value;
+ var year=frm.year.value;
+ var month=frm.month.value;
+ var day=frm.day.value;
+ var career=frm.career.value;
+ 
+ if(name==""){
+   alert("姓名不能为空!");
+   document.frm.name.focus();
+   return false;
+ }
+
+ if(ps==""){
+   alert("密码不能为空!");
+   document.frm.password.focus();
+   return false;
+ }
+ 
+ if(ps != psagain){
+   alert("两次输入的密码不同,请确认!");
+   document.frm.psagain.focus();
+   document.frm.psagain.select();
+   return false;
+ }
+ 
+ if(psquestion==""){
+   alert("密码提示问题是为了在您忘记密码时给您提示,请输入!");
+   document.frm.psquestion.focus();
+   return false;
+ }
+ 
+ if(psanswer==""){
+   alert("密码提示问题答案不能为空,请输入!");
+   document.frm.psanswer.focus();
+   return false;
+ }
+ 
+ if(email==""){
+   alert("E-mail不能为空,请输入!");
+   document.frm.email.focus();
+   return false;
+ }else{
+   if(email.indexOf('@')<=3 || email.indexOf('.')==-1){
+     alert("您输入的电子邮件格式不对,请确认!");
+     document.frm.email.focus();
+     document.frm.email.select();
+     return false;
+   }
+ }
+ 
+ if(year!=""){
+   if(isNaN(year)){
+     alert("您输入了年份,但有些却不是数字,请确认!");
+     frm.year.focus();
+     frm.year.select();
+     return false;
+   }
+ }
+ if(month!=""){
+   if(isNaN(month)){
+     alert("您输入了月份,但有些却不是数字,请确认!");
+     frm.month.focus();
+     frm.month.select();
+     return false;
+   }
+ }
+ if(day!=""){
+   if(isNaN(day)){
+     alert("您输入了日期,但有些却不是数字,请确认!");
+     frm.day.focus();
+     frm.day.select();
+     return false;
+   }
+ }
+ 
+ if(career==0){
+   alert("您还没有选择您的职业!");
+   frm.career.focus();
+   return false;
+ }
+ 
+}
+</script>
+</head>
+
+<body>
+<center>
+  <form name="frm" action="submit.asp" method="post" onSubmit="return check()">
+    <table width="435" border="0" cellspacing="1" cellpadding="3" bgcolor="#000000">
+      <tr> 
+        <td bgcolor="#CCCCCC">请输入您的姓名：</td>
+        <td bgcolor="#E6E6E6"><input name="name" type="text" size="15">
+          **</td>
+      </tr>
+      <tr> 
+        <td width="157" bgcolor="#CCCCCC">请选择一个密码：（5-8位）</td>
+        <td width="258" bgcolor="#E6E6E6"> <input name="password" type="password" size="15" maxlength="8">
+          ** </td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">请再输入一次确认：</td>
+        <td bgcolor="#E6E6E6"><input name="psagain" type="password" size="15" maxlength="8">
+          **</td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">密码提示问题：</td>
+        <td bgcolor="#E6E6E6"><input type="text" name="psquestion">
+          **如：我的最爱</td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">答案：</td>
+        <td bgcolor="#E6E6E6"><input type="text" name="psanswer">
+          **如：我的女儿</td>
+      </tr>
+	  <tr>
+        <td bgcolor="#CCCCCC">E-mail：</td>
+        <td bgcolor="#E6E6E6"><input type="text" name="email" size="30" maxlength="30">**</td>
+	  </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">请选择您的性别：</td>
+        <td bgcolor="#E6E6E6"> <input type="radio" name="sex" value="1" checked>
+          男&nbsp; <input type="radio" name="sex" value="0">
+          女 </td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">出生年月：</td>
+        <td bgcolor="#E6E6E6"><input name="year" type="text" size="4" maxlength="4">
+          年 
+          <input name="month" type="text" size="2" maxlength="2">
+          月 
+          <input name="day" type="text" size="2" maxlength="2">
+          日</td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">请选择您的最高学历：</td>
+        <td bgcolor="#E6E6E6"> <select name="education">
+            <option>请选择</option>
+            <option>博士</option>
+            <option>硕士</option>
+            <option>本科</option>
+            <option>专科</option>
+            <option>其它</option>
+          </select>
+        </td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">婚姻状况：</td>
+        <td bgcolor="#E6E6E6"><select name="marriage">
+            <option value="0">请选择</option>
+            <option value="1">已婚</option>
+            <option value="2">未婚</option>
+          </select></td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">工作状况：</td>
+        <td bgcolor="#E6E6E6"><select name="job">
+            <option value="0">请选择</option>
+            <option value="1">学生</option>
+            <option value="2">在岗</option>
+            <option value="3">下岗</option>
+            <option value="4">退休</option>
+          </select></td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">您的职业：</td>
+        <td bgcolor="#E6E6E6"> <select name="career">
+            <option value="0">请选择</option>
+            <option value="1">教师</option>
+            <option value="2">工人</option>
+            <option value="3">行政</option>
+            <option value="4">白领</option>
+            <option value="5">其它</option>
+          </select>
+          ** </td>
+      </tr>
+      <tr> 
+        <td bgcolor="#CCCCCC">请选择需要注册的省份：</td>
+        <td bgcolor="#E6E6E6">&nbsp;</td>
+      </tr>
+      <tr bgcolor="#E4E4E4"> 
+        <td colspan="2"><table width="268" border="0" align="right" cellpadding="0" cellspacing="0">
+            <tr> 
+              <td width="106"> <input type="radio" name="province" value="bj">
+                北京</td>
+              <td width="94"><input type="radio" name="province" value="tj">
+                天津</td>
+              <td width="111"><input type="radio" name="province" value="shh">
+                上海</td>
+            </tr>
+            <tr> 
+              <td><input type="radio" name="province" value="cq">
+                重庆</td>
+              <td><input type="radio" name="province" value="gd">
+                广东</td>
+              <td><input type="radio" name="province" value="hb">
+                河北</td>
+            </tr>
+            <tr> 
+              <td><input type="radio" name="province" value="ss">
+                四川</td>
+              <td><input type="radio" name="province" value="hlj">
+                黑龙江</td>
+              <td><input type="radio" name="province" value="nm">
+                内蒙</td>
+            </tr>
+            <tr> 
+              <td><input type="radio" name="province" value="gs">
+                甘肃</td>
+              <td><input type="radio" name="province" value="jx">
+                江西</td>
+              <td><input type="radio" name="province" value="yn">
+                云南</td>
+            </tr>
+          </table></td>
+      </tr>
+      <tr bgcolor="#E4E4E4"> 
+        <td> <div align="left">
+            <input name="secret" type="checkbox" value="" checked>
+            以上信息保密 </div></td>
+        <td><input type="submit" name="Submit2" value="提 交" style="font-size:12px">
+          &nbsp;&nbsp;
+          <input type="reset" name="reset" value="重 置" style="font-size:12px"></td>
+      </tr>
+    </table>
+</form>
+  </center>
+
+</body>
+</html>
+ 

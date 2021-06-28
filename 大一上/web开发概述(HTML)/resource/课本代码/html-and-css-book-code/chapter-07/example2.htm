@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<title>表单示例</title>
+<style type="text/css">
+<!--
+td {
+	font-size: 10pt;
+}
+-->
+</style>
+</head>
+
+<body>
+<form action="#" method="post" enctype="multipart/form-data" name="form1" target="_blank" id="form1">
+<fieldset>
+  <legend>用户注册</legend>
+  <table width="394" border="1" align="center" cellpadding="0" cellspacing="0">
+    <tr align="center" bgcolor="#6633CC">
+      <td width="103"><font color="white">用户名:</font></td>
+      <td width="283"><div align="left"><font color="white">
+        <input type="text" name="textfield" />
+      </font></div></td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="center">密码:</td>
+      <td><input type="password" name="textfield2" /></td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="center">性别:</td>
+      <td><p>
+        <label>
+          <input name="RadioGroup1" type="radio" value="1" checked="checked" />
+          男</label>
+        <label>
+          <input type="radio" name="RadioGroup1" value="2" />
+          女</label>
+        <br />
+      </p></td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="center">学历:</td>
+      <td><select name="select">
+        <option value="0">选择您的学历</option>
+        <option value="1">博士</option>
+        <option value="2">硕士</option>
+        <option value="3">本科</option>
+        <option value="4">专科及以下</option>
+      </select>      </td>
+    </tr>
+    <tr bgcolor="#CCFF99">
+      <td align="center">爱好:</td>
+      <td><input type="checkbox" name="checkbox" value="checkbox" id="checkbox" />
+      <label for="checkbox">旅游</label> 
+      <input type="checkbox" name="checkbox2" value="checkbox" id="checkbox2" />
+      <label for="checkbox2">音乐</label> 
+       
+      <input type="checkbox" name="checkbox3" value="checkbox" id="checkbox3" />
+      <label for="checkbox3">文学</label>
+       
+      <input type="checkbox" name="checkbox4" value="checkbox" id="checkbox4" />
+      <label for="checkbox4">体育</label>
+      </td>
+    </tr>
+    <tr bgcolor="#FFFFCC">
+      <td align="center">个性说明:</td>
+      <td><textarea name="textarea" cols="38" rows="4"></textarea></td>
+    </tr>
+	    <tr bgcolor="#CCFF99">
+      <td align="center">上传照片:</td>
+      <td><input type="file" name="file" /></td>
+    </tr>
+	    <tr bgcolor="#FFFFCC">
+      <td colspan="2" align="center"><input name="提交" type="image" id="提交" src="submit.jpg" /> 
+        <input name="重置" type="image" id="重置" src="reset.jpg" /></td>
+    </tr>
+  </table>
+  </fieldset>
+</form>
+</body>
+</html>
