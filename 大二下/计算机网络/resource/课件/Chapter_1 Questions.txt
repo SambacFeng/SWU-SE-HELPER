@@ -1,0 +1,20 @@
+what’s the Internet?
+what’s a protocol?
+network edge; hosts, access net, physical media
+network core: packet/circuit switching, Internet structure
+performance: loss, delay, throughput
+security
+protocol layers, service models
+history
+
+1、几种接入因特网的方法：DSL、Cable、home LAN、Ethernet、Wireless net
+2、常用通讯介质、网络设备
+3、包交换与电路交换的区别
+4、体会并描述Internet的构成和结构
+5、衡量网络性能的指标：时延*、丢包、吞吐量
+6、两种分层体系：OSI与TCP/IP
+7、理解什么是协议、封装
+8、初步了解网络安全
+9、Internet发展中的重要人物和事件
+
+

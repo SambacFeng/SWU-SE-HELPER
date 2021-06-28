@@ -1,0 +1,24 @@
+
+1、两种应用层结构：C/S P2P
+2、进程通信与端口、socket
+3、TCP与UDP的区别
+4、持续HTTP（persistent HTTP）和非持续HTTP（non-persistent HTTP）的区别
+5、了解HTTP头构成
+6、理解cookie的作用
+7、什么是代理服务器、作用
+8、Email中用到的主要协议
+9、DNS相关基础知识
+10、了解流视频相关知识
+11、什么是CDN
+
+动手：
+1.会配置HTTP服务
+2.会配置FTP服务
+3.会配置DNS服务
+4.会配置DHCP服务
+5.会利用Wireshark进行抓包分析
+
+
+
+
+
