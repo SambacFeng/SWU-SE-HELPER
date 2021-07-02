@@ -1,0 +1,15 @@
+﻿  company.cpp
+E:\类库与数据结构\实验报告\lab-3\Link\Link\ListTemp\listTemp.h(84,2): error C3490: 由于正在通过常量对象访问“size”，因此无法对其进行修改
+E:\类库与数据结构\实验报告\lab-3\Link\Link\ListTemp\listTemp.h(75): message : 在编译 类 模板 成员函数“void ListTemp<Employee>::AddLast(const T &) const”时
+          with
+          [
+              T=Employee
+          ]
+E:\类库与数据结构\实验报告\lab-3\Link\Link\ListTemp\company.cpp(14): message : 查看对正在编译的函数 模板 实例化“void ListTemp<Employee>::AddLast(const T &) const”的引用
+          with
+          [
+              T=Employee
+          ]
+E:\类库与数据结构\实验报告\lab-3\Link\Link\ListTemp\company.h(11): message : 查看对正在编译的 类 模板 实例化“ListTemp<Employee>”的引用
+  main.cpp
+  正在生成代码...
