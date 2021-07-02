@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="GB2312"?> 
+<svg width="800" height="850" xmlns="http://www.w3.org/2000/svg">
+<rect x="70" y="237" width = "50" height = "563" style ="fill:blue;"/> 
+<text font-size="20" x="75" y="217">1126</text>
+<rect x="140" y="325" width = "50" height = "475" style ="fill:blue;"/> 
+<text font-size="20" x="145" y="305">950</text>
+<rect x="210" y="676.5" width = "50" height = "123.5" style ="fill:blue;"/> 
+<text font-size="20" x="215" y="656.5">247</text>
+<rect x="280" y="678" width = "50" height = "122" style ="fill:blue;"/> 
+<text font-size="20" x="285" y="658">244</text>
+<rect x="350" y="698" width = "50" height = "102" style ="fill:blue;"/> 
+<text font-size="20" x="355" y="678">204</text>
+<rect x="420" y="718.5" width = "50" height = "81.5" style ="fill:blue;"/> 
+<text font-size="20" x="425" y="698.5">163</text>
+<rect x="490" y="721.5" width = "50" height = "78.5" style ="fill:blue;"/> 
+<text font-size="20" x="495" y="701.5">157</text>
+<rect x="560" y="736" width = "50" height = "64" style ="fill:blue;"/> 
+<text font-size="20" x="565" y="716">128</text>
+<rect x="630" y="743.5" width = "50" height = "56.5" style ="fill:blue;"/> 
+<text font-size="20" x="635" y="723.5">113</text>
+<rect x="700" y="747.5" width = "50" height = "52.5" style ="fill:blue;"/> 
+<text font-size="20" x="705" y="727.5">105</text>
+<line x1 = "30" y1 = "800" x2 = "800" y2 = "800" style="stroke:black; stroke - width:10"/>
+<line x1 = "30" y1 = "800" x2 = "30" y2 = "80" style="stroke:black; stroke - width:10"/>
+<line x1 = "800" y1 = "800" x2 = "780" y2 = "780" style="stroke:black; stroke - width:10"/>
+<line x1 = "800" y1 = "800" x2 = "780" y2 = "820" style="stroke:black; stroke - width:10"/>
+<line x1 = "50" y1 = "100" x2 = "30" y2 = "80" style="stroke:black; stroke - width:10"/>
+<line x1 = "10" y1 = "100" x2 = "30" y2 = "80" style="stroke:black; stroke - width:10"/>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="70" y="820">郭靖</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="140" y="820">黄蓉</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="210" y="820">洪七公</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="280" y="820">欧阳锋</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="350" y="820">黄药师</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="420" y="820">周伯通</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="490" y="820">丘处机</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="560" y="820">欧阳克</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="630" y="820">柯镇恶</text>
+<text style="cursor: move; pointer-events: inherit;" font-size="20px" font-family="SimSun"  x="700" y="820">梅超风</text>
+</svg>
