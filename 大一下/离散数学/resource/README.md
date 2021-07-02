@@ -1,0 +1,1 @@
+中文教材 [离散数学及其应用 原书第7版（美）KENNETH H.ROSEN著；徐六通，杨娟，吴斌译_北京：机械工业出版社_2015](https://pan.baidu.com/s/1L9nuJJ344DPZZVYu6Q49bQ) 提取码：SEHP 
