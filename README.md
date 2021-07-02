@@ -2,7 +2,7 @@
  
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)和[浙江大学](https://github.com/QSCTech/zju-icicles)相关项目启发，创立了本项目
 
-感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)......
+感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)......
 
 ## 前言
 
@@ -96,6 +96,8 @@
 3. 
    1. 提交 PR：上传完文件到个人仓库之后，点击 Pull Request 即可。请留意一下项目的文件组织。
    2. 也可以直接附加在 Issue 中，由维护者进行添加。
+
+如单文件大于25MB，请使用[git](https://git-scm.com/)或[GitHub Desktop](https://desktop.github.com/)等git客户端，将仓库clone到本地后进行相关操作。
 
 如果您不了解GitHub相关操作(强烈建议您抽出些许时间学习一下git和GitHub相关操作，这会对您的学习很有帮助)或希望匿名贡献，可以email至此邮箱，注明"SE-HELPER"和您发送的内容即可： feng20000310@email.swu.edu.cn 
 
