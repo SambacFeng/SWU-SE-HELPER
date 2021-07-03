@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+*.rtf linguist-vendored
+*.docx linguist-vendored
+*.doc linguist-vendored
+*.pptx linguist-vendored
+*.ppt linguist-vendored

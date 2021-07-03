@@ -1,0 +1,1 @@
+中文教材 [信息安全原理与技术 第5版_（美）查理·P.弗莱格（Charles P.Pfleeger）_北京：电子工业出版社_2016](https://pan.baidu.com/s/10ZJCTaO-gwMznqpn7q1Nrg) 提取码：SEHP 

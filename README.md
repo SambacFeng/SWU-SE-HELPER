@@ -2,7 +2,7 @@
  
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)和[浙江大学](https://github.com/QSCTech/zju-icicles)相关项目启发，创立了本项目
 
-感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)......
+感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)......
 
 ## 前言
 
@@ -79,6 +79,8 @@
 |  |  |  |  软件需求工程 |
 
 
+**注意**：作业答案和实验报告等内容由贡献者个人上传，并不能保证正确性，请酌情参考。对课程、作业和考试难度的评价带有个人主观色彩，同时由于每个人学力不同，难免有小马过河的问题，请结合自身情况进行学习。所有科目都有它的价值和意义所在，请用心对待每一门课程。
+
 如果您认为本仓库的一些文件侵犯了您的权益，请 [向我们发送邮件](mailto:feng20000310@email.swu.edu.cn) 。我们将会从仓库中彻底清除这些文件。
 
 ## 贡献
@@ -98,6 +100,8 @@
 3. 
    1. 提交 PR：上传完文件到个人仓库之后，点击 Pull Request 即可。请留意一下项目的文件组织。
    2. 也可以直接附加在 Issue 中，由维护者进行添加。
+
+如单文件大于25MB，请使用[git](https://git-scm.com/)或[GitHub Desktop](https://desktop.github.com/)等git客户端，将仓库clone到本地后进行相关操作。本项目未开启大文件支持，超过100MB的单文件请上传至网盘并将网盘链接添加到对应的README中。
 
 如果您不了解GitHub相关操作(强烈建议您抽出些许时间学习一下git和GitHub相关操作，这会对您的学习很有帮助)或希望匿名贡献，可以email至此邮箱，注明"SE-HELPER"和您发送的内容即可： feng20000310@email.swu.edu.cn 
 
