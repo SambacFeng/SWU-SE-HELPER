@@ -1,0 +1,28 @@
+1、使用find命令查找文件/etc目录下文件名包含字符串pass的文件。
+2、查找/usr/share目录下文件大小超过10M的文件
+3、查找大小为零的.c文件并删除
+4、Find files under the /usr/share/doc directory that have not been modified in more than 300 days. 
+5、Create a /tmp/FILES directory. Find all filles under the /usr/share directory that are more than 5MB and less than 10MB and copy them to the /tmp/FILES directory. 
+6、使用vi创建文本文test1并保存，文件内容如下：
+1  Justin Timberlake 545 7.30
+21 Taylor Swift 723  7.90
+3  Mick Jagger 610 7.90
+43 Lady Gaga 118 7.30
+5  Johnny Cash 482 6.50
+6  Elvis Presley 335 7.30
+7  John Lennon 271 7.90
+8  Michael Jackson 373 5.50
+①使用cat显示文件内容，如果显示行号，使用什么选项？
+②统计行数
+③显示文件前3行
+④显示文件后5行
+⑤如果使用命令sort test1，请解释输出结果。
+⑥按文件第一字段（第一列）按数字方式排序
+⑦按文件第二字段（第二列）排序
+⑧如何截取第1以及345字段
+⑨将字段间分割符由空格改为“，”，如
+1，Justin，Timberlake，545，$7.30
+......
+如何以数字方式按第四字段排序
+
+

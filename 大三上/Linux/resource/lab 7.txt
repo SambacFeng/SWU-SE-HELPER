@@ -1,0 +1,24 @@
+1、从键盘输入文件夹名
+     这个文件是否存在，若不存在则给予一个“Filename does not exist”的讯息，并中断程序； 
+     若这个文件存在，则判断他是个文件或目录，结果输出“Filename is regular file”或“Filename is directory”， 
+     判断一下，执行者的身份对这个文件或目录所拥有的权限，并输出权限数据！
+2、解释下面代码的作用
+	read -p "Please input （Y/N）: " yn
+	[ "${yn}" == "Y" -o "${yn}" == "y" ] && echo "OK, continue" && exit 0
+	[ "${yn}" == "N" -o "${yn}" == "n" ] && echo "Oh, interrupt!" && exit 0
+	echo "I don't know what your choice is" && exit 0
+3、用if语句完成问题1
+4、下面代码有什么缺点，如何改进？（将要创建的目录名以参数方式传入）
+	#！/bin/sh
+	#make a directory
+	mkdir /home/dave/mydocs
+	#copy all doc files
+	cp *.docs /home/dave/docs
+	#delete all doc files
+	rm *.docs
+5、编写脚本user_info查找用户是否存在，如何存在则显示用户的主目录信息。如何用户不存在，则判断在/home下是否存在以该用户名命名的目录命名的目录。   
+     user_info tom
+    要求能够处理用户的错误调用，并给出提示。
+6、编写脚本user_add，在创建新用户前，判断用户名是否存在，并相应处理。（将第5题的脚本改为函数，在主程序中，创建用户之前，调用该函数判断用户是否存在）
+     user_add tom
+     通过函数的返回值代表不同的情况。 
