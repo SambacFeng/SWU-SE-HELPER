@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/exp/exp3/DynamicImage.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp3/Entity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp3/GameManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp3/MainApp.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp3/Render.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp4/GIFApp.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp4/TextPane.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp5/DynamicImage.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp5/MainApp.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp6/MyInvocationHandler.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/exp/exp6/ProxyApp.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
