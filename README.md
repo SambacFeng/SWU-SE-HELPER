@@ -2,7 +2,7 @@
  
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)和[浙江大学](https://github.com/QSCTech/zju-icicles)相关项目启发，创立了本项目
 
-感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[EricFang](https://github.com/cnyvfang)......
+感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[EricFang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)......
 
 ## 前言
 
@@ -37,7 +37,7 @@
 | 通识必修课 | 学科必修课 | 专业必修课 | 专业选修课 | 
 | --------- | --------- | --------- | --------- |
 | 就业指导A | [高等数学 IB](大一下/高等数学IB) | [C语言](大一下/C语言) | [信息安全原理与应用](大一下/信息安全原理与应用) |
-| 近现代史纲要 | [离散数学](大一下/离散数学) | [面向对象程序设计(C++)](大一下/面向对象程序设计(C++)) | [解决问题与批判性思维](大一下/解决问题与批判性思维) |
+| [近现代史纲要](大一下/近现代史纲要) | [离散数学](大一下/离散数学) | [面向对象程序设计(C++)](大一下/面向对象程序设计(C++)) | [解决问题与批判性思维](大一下/解决问题与批判性思维) |
 
 - 大二上
 
