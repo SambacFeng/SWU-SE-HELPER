@@ -1,5 +1,5 @@
 # 西南大学软件工程专业生存指南
- 
+
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)和[浙江大学](https://github.com/QSCTech/zju-icicles)相关项目启发，创立了本项目
 
 感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[EricFang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)......
@@ -63,7 +63,7 @@
 
 | 通识必修课 | 学科必修课 | 专业必修课 | 专业选修课 | 
 | --------- | --------- | --------- | --------- |
-| 就业指导B | [大学物理Ⅰ](大三上/大学物理Ⅰ) | 企业级软件开发平台(J2EE) | [Unix/Linux环境实践](大三上/Linux) |
+| 就业指导B | [大学物理Ⅰ](大三上/大学物理Ⅰ) | [企业级软件开发平台(J2EE)](大三上/企业级软件开发平台(J2EE)) | [Unix/Linux环境实践](大三上/Linux) |
 |  |  | [软件工程导论](大三上/软件工程导论) | 高级Web框架与前端技术 |
 |  |  |  | [算法分析与设计](大三上/算法分析与设计)	 |
 |  |  |  | 移动应用开发技术基础	 |
