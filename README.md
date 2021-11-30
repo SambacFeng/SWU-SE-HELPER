@@ -2,7 +2,7 @@
 
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)和[浙江大学](https://github.com/QSCTech/zju-icicles)相关项目启发，创立了本项目
 
-感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[EricFang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)......
+感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[EricFang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)、[wck106](https://github.com/wck106)......
 
 ## 前言
 
