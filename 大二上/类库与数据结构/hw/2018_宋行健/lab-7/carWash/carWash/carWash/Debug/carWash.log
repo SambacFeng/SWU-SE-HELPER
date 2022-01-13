@@ -1,9 +1,0 @@
-﻿  car.cpp
-  main.cpp
-  washCmp.cpp
-E:\类库与数据结构\实验报告\lab-7\carWash\washCmp.cpp(13,21): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-E:\类库与数据结构\实验报告\lab-7\carWash\washCmp.cpp(14,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-E:\类库与数据结构\实验报告\lab-7\carWash\washCmp.cpp(76,15): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-E:\类库与数据结构\实验报告\lab-7\carWash\washCmp.cpp(78,55): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
-  正在生成代码...
-  carWash.vcxproj -> E:\类库与数据结构\实验报告\lab-7\carWash\carWash\Debug\carWash.exe

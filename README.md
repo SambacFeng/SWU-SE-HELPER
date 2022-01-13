@@ -2,7 +2,7 @@
 
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)和[浙江大学](https://github.com/QSCTech/zju-icicles)相关项目启发，创立了本项目
 
-感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[EricFang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)......
+感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[EricFang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)、[wck106](https://github.com/wck106)、[HongxiangLu](https://github.com/HongxiangLu)......
 
 ## 前言
 
@@ -23,14 +23,17 @@
 
 等等。
 
-以下课程分类按照教务系统中实际分类情况而非培养方案
+为减小项目体积，所有书籍均已更换为电子版链接，参见 [电子版课本、参考书汇总](booklist.md)
+
+以下课程分类按照教务系统中实际分类情况而非培养方案，受培养方案更改等因素影响，请按课程名进行查找，学期以学院实际开课学期为准。
 
 - 大一上
 
 | 通识必修课 | 学科必修课 | 专业必修课 | 专业选修课 |  
 | --------- | --------- | --------- | --------- |
-| 思修与法律基础 | [高等数学 IA](大一上/高等数学IA) | [Web开发概述(HTML)](大一上/Web开发概述(HTML)) | [线性代数 I](大一上/线性代数) |
-|  | [计算机科学导论](计算机科学导论) | [编程概述(.Net)](大一上/编程概述(.Net)) | [专业导论](大一上/专业导论与个人发展管理) |
+| 思修与法律基础 | [高等数学 IA](大一上/高等数学IA) | [web开发概述(HTML)](大一上/web开发概述(HTML)) | [线性代数 I](大一上/线性代数) |
+|  | [(中外)计算机科学导论](计算机科学导论) | [编程概述(.Net)](大一上/编程概述(.Net)) | [专业导论](大一上/专业导论与个人发展管理) |
+|  | [(普通)软件工程学科概论](大一上/软件工程学科概论) |  |  |
 
 - 大一下
 
@@ -64,8 +67,7 @@
 | 通识必修课 | 学科必修课 | 专业必修课 | 专业选修课 | 
 | --------- | --------- | --------- | --------- |
 | 就业指导B | [大学物理Ⅰ](大三上/大学物理Ⅰ) | [企业级软件开发平台(J2EE)](大三上/企业级软件开发平台(J2EE)) | [Unix/Linux环境实践](大三上/Linux) |
-|  |  | [软件工程导论](大三上/软件工程导论) | 高级Web框架与前端技术 |
-|  |  |  | [算法分析与设计](大三上/算法分析与设计)	 |
+|  |  | [软件工程导论](大三上/软件工程导论) | [算法分析与设计](大三上/算法分析与设计) |
 |  |  |  | 移动应用开发技术基础	 |
 |  |  |  | 游戏开发基础	 |
 
