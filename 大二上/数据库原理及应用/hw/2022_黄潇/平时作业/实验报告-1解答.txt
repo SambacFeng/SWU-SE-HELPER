@@ -1,0 +1,184 @@
+1.查询李勇所选课程的课程号，课程名（分别使用连接和子查询）
+1）连接	PPT3-2 23页 例3.54
+select course.cno,cname
+from student,sc,course
+where sname='李勇' and student.sno=sc.sno and sc.cno=course.cno; 
+
+2)子查询	PPT3-2 34页 例3.56
+select cno,cname
+from course
+where cno IN(select cno 
+			from sc
+			where sno IN(select sno 
+						from student
+						where sname='李勇'));
+						
+
+3)子查询+连接	PPT无混合使用的例子
+select cno,cname
+from course
+where cno IN(select cno
+			from sc,student
+			where sname='李勇' and student.sno=sc.sno);
+			
+2.查询和李勇年龄相同的学生的学号，姓名和专业
+select sno,sname,sdept	PPT3-2 37页 例3.55
+from student 
+where sage=(select sage
+			from student
+			where sname='李勇') and sname!='李勇';
+			
+3.查询没有参加数据库这门课程考试学生的学号，姓名和专业
+1)选修了数据库课程，有数据库选课记录，但grade is NULL?
+注意：必须写 is NULL,不能写 = NULL!	
+解1（连接）：PPT3-2 23页 例3.54
+select student.sno,sname,sdept
+from student,sc,course
+where cname='数据库' and grade is NULL 
+	and student.sno=sc.sno and sc.cno=course.cno;
+解2（嵌套）：PPT3-2 34页 例3.56
+select sno,sname,sdept
+from student
+where sno IN(select sno 
+			from sc
+			where cno=(select cno
+						from course
+						where cname='数据库') and grade is NULL);							
+解3：
+select sno,sname,sdept
+from student
+where EXISTS  (select *
+		from sc
+		where cno=(select cno
+				from course
+				where cname='数据库')
+		and sno=student.sno and grade is NULL);
+
+		
+2)
+select sno,sname,sdept
+from student
+where NOT EXISTS(select * 
+			from sc
+			where sno=student.sno and grade is not NULL 
+			and cno=(select cno
+					from course
+					where cname='数据库'));		
+						
+4.查询李勇选课的总学分
+解1（连接）：
+select SUM(ccredit)
+from student,sc,course
+where sname='李勇' and student.sno=sc.sno and sc.cno=course.cno;
+解2（嵌套）：
+select SUM(ccredit)
+from course
+where cno IN(select cno
+			from sc
+			where sno=(select sno
+						from student
+						where sname='李勇'));
+解3（嵌套+连接）：
+select sum(Ccredit)
+from course
+where cno IN(select cno
+		from sc,student 
+		where sname='李勇' and student.sno=sc.sno);
+		
+5.统计每门课程的选课人数，输出课号、课程名称和人数
+select course.cno,cname,count(*)
+from sc,course
+where sc.cno=course.cno
+group by course.cno;
+注意：select course.cno,cname,count(sno) 也正确
+
+6.统计平均成绩超过90的学生的姓名，学号和系
+解1:
+select sname,sno,sdept
+from student,sc
+where student.sno=sc.sno
+group by student.sno
+having AVG(grade)>=90;
+解2：
+select sname,student.sno,sdept
+from student
+where 	(select AVG(grade)
+		from sc
+		where sno=student.sno) >=90;
+
+
+7.查询数据库这门课取得最高成绩的学生学号、姓名
+解1：
+select student.sno,sname,sdept
+from student,sc,course
+where cname='数据库' and grade=(select MAX(grade)
+								from sc
+		                        where cno=(select cno
+											from course
+											where cname='数据库'))
+      and student.sno=sc.sno and sc.cno=course.cno;
+解2:
+注意：1)最高分可能有多个学生并列，一定要用IN
+	  2)在查询某个学生的数据库成绩和查询数据库最高成绩时，条件都要包含cname='数据库'
+select sno,sname
+from student
+where sno IN(select sno
+			from sc
+			where cno=(select cno
+						from course
+						where cname='数据库')
+			and grade=(select MAX(grade)
+						from sc
+						where cno=(select cno
+									from course
+									where cname='数据库')));
+
+解3：
+select sno,sname
+from student
+where sno IN(select sno
+			from sc,course
+			where cname='数据库' and grade=(select MAX(grade)
+											from sc,course
+											where sc.cno=course.cno and cname='数据库')
+			and sc.cno=course.cno);			
+			
+8.创建表t1(sdept,total)，使用子查询插入系的名称以及人数
+create table t1
+	(sdept	CHAR(15),
+	 total SMALLINT);
+	 
+insert into	 t1
+	select sdept,count(sno)
+	from student
+	group by sdept;
+
+9.将计算机的学生的成绩提高5%
+update sc
+set grade=grade*(1+0.05)
+where sno IN(select sno
+		from student
+		where sdept='CS');
+		
+10.创建选修了数据库的学生视图，属性包括学号，姓名和成绩
+create view stuDB(sno,name,grade)
+as 
+select student.sno,sname,grade
+from student,sc,course
+where student.sno=sc.sno and sc.cno=course.cno and cname='数据库';
+
+select * from stuDB;
+
+11.查询计算机系选修了数据库这门课程的学生学号、姓名和成绩
+从10.创建的视图stuDB查询
+select *
+from stuDB
+where sno IN(select sno 
+			from student 
+			where sdept='CS');
+		
+12.查询数据库这每门课成绩超过平均分的同学的学号、姓名和成绩
+select *
+from stuDB
+where grade>=(select AVG(grade)
+		from stuDB);
