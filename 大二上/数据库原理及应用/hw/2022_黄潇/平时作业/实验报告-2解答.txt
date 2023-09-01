@@ -1,0 +1,227 @@
+1、创建用户user1，user2，user3。
+	create user user1,user2,user3;
+
+2、授予用户user1和user2在student表上的select权限，对sc表grade属性的修改权限，
+并且允许user2将其被授予的权限转授其他用户。
+grant select 
+on table student
+to user1; 
+
+grant select 
+on table student
+to user2
+with grant option; 
+
+grant UPDATE(grade)
+on table sc
+to user1;	
+	
+grant UPDATE(grade)
+on table sc
+to user2
+with grant option;	
+
+show grants for user1;
+show grants for user2;
+
+使用user2登录系统，
+必须使用命令行：
+mysql>quit   /*退出当前数据库连接，切换用户登录*/
+D:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u user2
+
+授予user3对sc表grade属性的修改权限。
+grant UPDATE(grade)
+on table sc
+to user3;
+show grants for user3;
+
+使用root用户登录，
+mysql>quit 
+D:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p
+
+收回user1对student表的select权限。
+revoke SELECT 
+on table student
+from user1;
+
+3、创建计算机系学生视图cs_student，创建角色cs_teacher，授予该角色对cs_student视图的select权限。将该角色授予user3。 
+create view cs_student
+as 
+select *
+from student
+where sdept='CS';
+
+create role cs_teacher;
+
+grant SELECT 
+on cs_student	/*注意不能写成on view cs_student*/
+to cs_teacher;
+
+grant cs_teacher 
+to user3;
+
+4、
+1）为sc表添加check约束，确保geade取值在0到100之间。
+ ALTER TABLE sc
+ ADD CONSTRAINT c1 CHECK (grade BETWEEN 0 AND 100);
+注意：执行此语句时，如果表中已有数据不满足此约束，即成绩不在0-100之间，
+会提示错误Error Code: 3819. Check constraint 'c1' is violated.	0.015 sec
+
+2）为sc表添加约束，确保当在student表删除学生数据时，删除sc中对应的选课纪录。
+ ALTER TABLE sc
+ ADD CONSTRAINT snoKey FOREIGN KEY (sno)  REFERENCES student(sno)
+ ON DELETE CASCADE; 
+
+3）为sc表添加约束，确保挡在course表中修改cno属性时，sc表中记录做相应修改。
+ ALTER TABLE sc
+ ADD CONSTRAINT cnoKey FOREIGN KEY (cno)  REFERENCES course(cno)
+ ON UPDATE CASCADE; 
+
+5、使用alter table删除约束第4题中添加的check约束。
+/*ALTER TABLE sc 
+DROP CONSTRAINT c1,snoKey,cnoKey;	语法错误：不允许同时删除多个约束*/
+ALTER TABLE sc 
+DROP CONSTRAINT c1;
+ALTER TABLE sc 
+DROP CONSTRAINT snoKey;	
+ALTER TABLE sc 
+DROP CONSTRAINT cnoKey;	
+
+6、使用cursor（游标）输出student的内容。
+注意：/ 后面不能书写/*...*/注释，否则不会执行。因此Query中最好不写注释。
+DELIMITER // 
+create procedure disp_stu()
+begin
+declare no INT;
+declare name CHAR(20);
+declare sex CHAR(2);
+declare age SMALLINT;
+declare dept CHAR(15);
+declare entrance DATE;
+declare row_not_found TINYINT DEFAULT FALSE;
+
+declare stu_cursor cursor for 
+	select * from student;
+DECLARE CONTINUE HANDLER FOR NOT FOUND
+SET row_not_found = TRUE;
+
+Open stu_cursor;
+While row_not_found = FALSE DO
+FETCH stu_cursor INTO no,name,sex,age,dept,entrance;
+select CONCAT('Sno: ',no,' Name: ',name,' Sex: ',sex,' Age: ',age,' Dept: ',dept) as message;/*连接输出*/
+/*select no as No, name as Name,dept as Dept;*/
+end while;
+
+CLOSE stu_cursor;
+end//
+DELIMITER ;
+定界符// 代替默认结束符分号; 目的是让定界符之间的语句作为一个整体执行，而不是每次遇到分号就执行。
+
+call disp_stu();
+
+7、创建过程getscore，该过程输入学号和课程号信息，返回对应的成绩
+注意：题目要求返回成绩不是输出，不应直接在过程中输出，应使用输出参数返回成绩
+DELIMITER //
+create procedure getscore(IN p_sno CHAR(9),IN p_cno CHAR(4),OUT score SMALLINT)
+begin
+select grade into score
+from sc
+where sno=p_sno and  cno=p_cno;
+
+if score=NULL then
+    SET score=0; /*score=0; 错误，存储过程中变量必须用SET赋值 */
+end if;
+end//
+DELIMITER ;
+
+调用-带输入输出参数的存储过程：
+SET @score=0;
+CALL getscore('201215121',1,@score);
+SELECT @score;
+此句与上句等价：
+SELECT @score FROM DUAL;
+说明：DUAL是一张虚表,作用就是输出变量或常量。可以省略FROM DUAL;
+
+8、创建函数getdept，该函数输入学生的学号，返回对应的sdept
+DELIMITER //
+create function getdept(f_no CHAR(9))
+RETURNS CHAR(15)
+DETERMINISTIC
+begin
+declare dept CHAR(15);
+select sdept into dept
+from student
+where sno=f_no;
+
+if dept=NULL then
+    SET dept='无院系信息'; 
+end if;
+RETURN(dept);
+end//
+DELIMITER ;
+
+调用函数：
+1)SELECT getdept('201215121') as department;
+2)SET @sno='201215121';
+SELECT getdept(@sno) as department;
+
+9、在sc表创建触发器tscore，确保“1”号课的成绩大于80.
+DELIMITER //
+CREATE TRIGGER tscore
+BEFORE INSERT ON sc 
+FOR EACH ROW 
+BEGIN
+IF NEW.cno='1' and NEW.grade<=80 THEN 
+SIGNAL SQLSTATE '50001' SET MESSAGE_TEXT = 'Grade of course 1 must be higher than 80.'; 
+END IF;
+END//
+DELIMITER ;
+注意：定界符DELIMITER // 等一定不能漏写！
+
+drop trigger IF EXISTS tscore;
+注意：drop trigger IF EXISTS tscore on sc; 语法错误，不允许写on sc
+
+10、实现约束：数据库这门课程的选课人数不能超过5人
+方法1：
+DELIMITER //
+CREATE TRIGGER max_num
+BEFORE INSERT ON sc 
+FOR EACH ROW 
+BEGIN
+declare num SMALLINT;
+declare courseno CHAR(4);
+select count(*),cno  into num,courseno
+from sc
+group by cno
+having cno=(select cno from course
+	    where cname='数据库');
+IF NEW.cno=courseno and num>5-1 THEN 
+SIGNAL SQLSTATE '50001' SET MESSAGE_TEXT = '数据库课程的选修人数不能超过5人。'; 
+END IF;
+END//
+DELIMITER ;
+
+方法2：
+DELIMITER //
+CREATE TRIGGER max_number
+BEFORE INSERT ON sc 
+FOR EACH ROW 
+BEGIN
+declare num SMALLINT;
+declare courseno CHAR(4);
+select count(*),cno  into num,courseno
+from sc
+where cno=(select cno from course
+	    where cname='数据库')
+group by cno;    /*在触发器约束中使用聚集函数必须进行GROUP BY分组，否则执行插入操作激活触发器时报错*/
+IF NEW.cno=courseno and num>5-1 THEN 
+SIGNAL SQLSTATE '50001' SET MESSAGE_TEXT = '数据库课程的选修人数不能超过5人。'; 
+END IF;
+END//
+DELIMITER ;
+
+说明：
+必须进行GROUP BY分组，否则执行插入操作激活触发器时报错：
+1140: In aggregated query without GROUP BY, expression #2 of SELECT list contains 
+nonaggregated column 'st.sc.Cno'; this is incompatible with sql_mode=only_full_group_by	
+方法2：
