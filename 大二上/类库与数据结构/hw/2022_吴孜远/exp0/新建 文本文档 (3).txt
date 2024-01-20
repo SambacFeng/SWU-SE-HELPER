@@ -1,0 +1,12 @@
+#include<iostream>
+#include "company1.h"
+#include "company1.cpp"
+using namespace std;
+
+int main()
+{
+	Company cmp;
+	cmp.findBestPaid();
+	cmp.printBestPaid();
+
+}
