@@ -1,0 +1,59 @@
+第一次
+(define (enumerate-interval low high)
+  (if (> low high)
+    nil
+    (cons low (enumerate-interval ( + low 1) high))))
+
+(define (filter predicate sequence)
+  (cond ((null? sequence) nil)
+        ((predicate (car sequence))
+         (cons (car sequence)
+               (filter predicate (cdr sequence))))
+    (else (filter predicate (cdr sequence)))))
+
+(define (accumulate op initial sequence)
+  (if (null? sequence)
+      initial
+      (op (car sequence)
+          (accumulate op initial (cdr sequence)))))
+
+(define (sum-factor n)
+  (define (factor? x)
+     (= (remainder n x) 0))
+  (accumulate + 0
+    (filter factor? (enumerate-interval 1 n))))
+
+第二次
+(define (square x)
+  (* x x))
+
+(define (compose f g)
+  (lambda (x) (f (g x))))
+
+
+(define (repeated h n)
+  (if (= n 1)
+      h
+      (compose h (repeated h (- n 1)))))
+
+第三次第一题
+(define (length seq)
+  (if (null? seq)
+      0
+      (+ 1 (length (cdr seq)))))
+
+(define (last-part n items)
+  (define (switch x items)
+    (cond ((< x 0) items)
+          (else (if (= x 0)
+              items
+              (switch (- x 1) (cdr items))))))
+   (switch (- (length items) n) items))
+
+第三次第二题
+(define (plus-index items)
+  (define (plus-index-in items sub)
+    (if (null? items)
+        nil
+        (cons (+ sub (car items)) (plus-index-in (cdr items) (+ 1 sub)))))
+  (plus-index-in items 0))
