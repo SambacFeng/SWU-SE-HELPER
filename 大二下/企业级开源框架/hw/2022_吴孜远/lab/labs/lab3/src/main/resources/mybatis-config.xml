@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+<!--    从文件jdbc.properties中加载参数-->
+    <properties resource="jdbc.properties"></properties>
+
+    <typeAliases>
+<!--        自动将pojo中的类的完整类名（包括了地址）用类名代替-->
+        <package name="com.wzy.j2eelabs.lab3.pojo"/>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+<!--            连接数据库池的方式来获取dataSource-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+<!--    -->
+    <mappers>
+        <package name="com.wzy.j2eelabs.lab3.mapper"/>
+    </mappers>
+</configuration>

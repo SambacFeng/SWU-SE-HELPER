@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wzy.j2eelabs.lab5.mapper.DeliveryOrderMapper">
+    <insert id="insertDelivery" parameterType="DeliveryOrder">
+        insert into delivery_order
+        values(NULL, #{courierId}, #{trackingId}, #{address}, #{phone})
+    </insert>
+
+<!--    void deleteDelivery(@Param("trackingId") String trackingId);-->
+    <delete id="deleteDelivery" parameterType="String">
+        delete from delivery_order where tracking_id = #{trackingId}
+    </delete>
+
+<!--    void updateDelivery(DeliveryOrder deliveryOrder);-->
+    <update id="updateDelivery" parameterType="DeliveryOrder">
+        update delivery_order
+        set courier_id = #{courierId},
+            address = #{address},
+            phone = #{phone}
+        where tracking_id = #{trackingId}
+    </update>
+
+<!--    利用一个无参构造函数（默认的）或指定的构造函数来创建对象
+        此时使用驼峰命名规则：
+        MyBatis 默认使用骆驼命名规则（CamelCase）来处理数据库字段和 Java 类字段之间的映射。
+        例如，数据库中的字段 first_name 可以映射到 Java 类的字段 firstName
+
+        我们这里采用resultMap的方式-->
+<!--    DeliveryOrder selectByTrackingId(@Param("trackingId") int trackingId);-->
+    <select id="selectByTrackingId" parameterType="String" resultType="DeliveryOrder">
+        select * from delivery_order where tracking_id = #{trackingId}
+    </select>
+
+<!--&lt;!&ndash;可以定义一个 <resultMap> 元素来指定 SQL 查询结果与 POJO 类字段之间的映射关系。-->
+<!--    通过 <resultMap>，你可以明确指出数据库列名与 Java 类属性名的映射。&ndash;&gt;-->
+<!--    <resultMap id="DeliveryOrderResultMap" type="DeliveryOrder">-->
+<!--        <id property="deliveryId" column="delivery_id" />-->
+<!--        <result property="courierId" column="courier_id" />-->
+<!--        <result property="trackingId" column="tracking_id" />-->
+<!--        <result property="address" column="address" />-->
+<!--        <result property="phone" column="phone" />-->
+<!--    </resultMap>-->
+
+</mapper>

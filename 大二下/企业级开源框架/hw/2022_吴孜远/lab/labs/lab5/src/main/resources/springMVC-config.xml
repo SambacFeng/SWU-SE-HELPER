@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+<!--      scan
+        mvc:defult-servlet-handler
+        mvc:annotationdriven
+        internalresourceviewresolver
+            view: Jstlview
+            prefix
+            surfix
+        mvc:viewcontroller
+
+        scan 三个mvc 视图解析器viewresolver-->
+    <context:component-scan base-package="com.wzy.j2eelabs.lab5.controller">
+    </context:component-scan>
+
+    <!--
+    3.配置<mvc:default-servlet-handler/>的作用：
+         会在Spring MVC上下文中定义一个DefaultServletHttpRequestHandler，
+        它像一个检查员，对进入DispatcherServlet的URL进行筛查，
+        如果发现是静态资源的请求， 就将该请求转由Web应用服务器默认的Servlet处理，
+        如果不是静态资源的请求， 才由DispatcherServlet继续处理。
+-->
+    <mvc:default-servlet-handler/>
+    <!--4.解决@Controller标识的类的bean的注入和使用-->
+    <mvc:annotation-driven/>
+    <!-- 配置视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+<!--    视图控制器，直接将根目录匹配到index中，省略了在controller中的页面跳转-->
+    <mvc:view-controller path="/" view-name="login"></mvc:view-controller>
+</beans>
