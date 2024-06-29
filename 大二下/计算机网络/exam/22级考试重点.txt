@@ -1,0 +1,37 @@
+Introduction:
+存储转发特点
+分层思想和体系，各层概念一数据、报文、包、帧、比特流
+分层思想和体系，网络通信涉及的流程和协议(6.7adayin the life of a web request)
+各层常用网络设备
+包交换(以太网)与电路交换(FR)概念、特点，二者比较 
+
+Application Layer:
+DNS 定义、作用、工作原理,
+http-https.
+ping、tracert、nslookup、ipconfig、arp-a
+
+Transport Layer:
+传输层多路复用技术.
+TCP 特点，三次握手
+点到点(进程到进程)通信-主机到主机通信
+
+Network Layer：(结合实验内容)
+网络层功能、作用，相关协议如何体现和实现这些功能
+IP地址:IPV4，主机可用IP，子网掩码、默认网关,
+什么是 NAT，作用.
+子网划分一好处、划分方法、划分过程，子网IP范围、掩码、网
+络地址、广播地址
+路由表一直连、静态、动态(IGP与EGP 相关协议)、SDN
+Dijkstra 算法，算法描述、计算过程、计算目的(实验7)
+SDN 概念、目的、好处、架构构成
+
+Data link Layer.
+链路层错误检测方法，错误纠正机制，实现方法
+ARP 作用、工作原理、工作过程、何时用(实验8)
+VLAN 概念、目的、优点
+
+Mobile and Wireless Networks
+几种无线技术，应用场景
+
+Security of Networks
+防火墙
