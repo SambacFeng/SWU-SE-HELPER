@@ -12,3 +12,4 @@
 1.画data flow图（15分）
 2.画状态转移图state trans（15分）
 
+documented by 2022 SE class1 Zhu Hao 2025.6.25
