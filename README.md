@@ -2,7 +2,7 @@
 
 受[清华大学](https://github.com/PKUanonym/REKCARC-TSC-UHT)和[浙江大学](https://github.com/QSCTech/zju-icicles)相关项目启发，创立了本项目
 
-感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[Cheng-Yu Fang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)、[wck106](https://github.com/wck106)、[HongxiangLu](https://github.com/HongxiangLu)、[lemongooo](https://github.com/lemongooo)、[Parala2333](https://github.com/Parala2333)、[LeingBai](https://github.com/LeingBai)、[GeraltWu](https://github.com/GeraltWu)......
+感谢对本项目贡献的同学：[SambacFeng](https://github.com/SambacFeng)、[Jermaine_R_X](https://github.com/21558568)、[SongXJ01](https://github.com/SongXJ01)、[Cheng-Yu Fang](https://github.com/cnyvfang)、[Isla0116](https://github.com/Isla0116)、[wck106](https://github.com/wck106)、[HongxiangLu](https://github.com/HongxiangLu)、[lemongooo](https://github.com/lemongooo)、[Parala2333](https://github.com/Parala2333)、[LeingBai](https://github.com/LeingBai)、[GeraltWu](https://github.com/GeraltWu)、[dcygtheshy](https://github.com/dcygtheshy/)......
 
 ## 前言
 
@@ -79,6 +79,7 @@
 |  |  |  |  [软件需求工程](大三下/软件需求工程) |
 |  |  |  |  [名家讲台](大三下/名家讲台) |
 |  |  |  | [数据挖掘与数据仓库](大三下/数据挖掘与数据仓库) |
+|  |  | [软件项目管理](大三下/软件项目管理) |
 
 > **注意：**
 > 作业答案和实验报告等内容由贡献者个人上传，并不能保证正确性，请酌情参考。对课程、作业和考试难度的评价带有个人主观色彩，同时由于每个人学力不同，难免有小马过河的问题，请结合自身情况进行学习。所有科目都有它的价值和意义所在，请用心对待每一门课程。
